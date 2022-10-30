@@ -1,17 +1,27 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div id="jssdk"></div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import jsSDK from "@/jsSDK/index.js"
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  mounted () {
+    /* eslint-disable */
+    jsSDK.init({
+      el: "#jssdk",
+      ability: 'login',
+      success: function () {
+        top.location.href = "https://www.baidu.com";
+      }
+    },
+      function () {
+        console.log("初始化完成");
+      })
+    console.log(jsSDK)
   }
 }
 </script>
