@@ -13,7 +13,7 @@ export default {
     /* eslint-disable */
     jsSDK.init({
       el: "#jssdk",
-      ability: 'login',
+      ability: ['login', 'auth'],
       success: function () {
         top.location.href = "https://www.baidu.com";
       }

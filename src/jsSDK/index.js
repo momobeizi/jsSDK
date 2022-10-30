@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import Vue from "vue";
 import { Button, Input } from "element-ui";
+import main from "@/jsSDK/main/index.vue"
 Vue.use(Button);
 Vue.use(Input);
 
@@ -18,7 +19,7 @@ class jsSDK {
       options = {
         el: "#app",
         appId: "",
-        ability: 'login',
+        ability: ['login'],
         success: Function
       };
     }
@@ -26,7 +27,7 @@ class jsSDK {
     console.log(this.options)
     const el = this.options.el;
     new Vue({
-      render: (h) => h(require(`./${options.ability}/${options.ability}Sdk.vue`).default, { props: this.options }),
+      render: (h) => h(main, { props: this.options }),
       props: {
         ...options
       },
