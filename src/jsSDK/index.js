@@ -1,10 +1,6 @@
-/* eslint-disable no-unused-vars */
 import Vue from "vue";
-import { Button, Input } from "element-ui";
 import main from "@/jsSDK/main/index.vue"
-Vue.use(Button);
-Vue.use(Input);
-
+import "@/jsSDK/components"
 
 class jsSDK {
   constructor(options, callback) {

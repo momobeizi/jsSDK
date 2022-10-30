@@ -36,5 +36,5 @@ module.exports = {
       libraryExport: "default"
     }
   },
-  css: { extract: false }
+  css: { extract: true }
 };

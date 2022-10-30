@@ -1,6 +1,6 @@
 <template>
   <div>
-    <el-button @click="finishedAuth">实名完成</el-button>
+    <it-button @click="finishedAuth">实名完成</it-button>
   </div>
 </template>
 
