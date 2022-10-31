@@ -6,6 +6,7 @@
 import login from '@/jsSDK/login/loginSdk.vue';
 import auth from '@/jsSDK/auth/authSdk.vue';
 export default {
+  name: 'mainIndex',
   props: {
     el: String,
     ability: Array,
@@ -39,4 +40,5 @@ export default {
 </script>
 
 <style>
+
 </style>
